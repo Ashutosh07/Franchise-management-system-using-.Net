@@ -1,0 +1,71 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 97%; position: static;
+            height: 12%">
+            <tr>
+                <td align="center" valign="top">
+                    <div style="text-align: center">
+                        <table style="width: 100px; position: static; height: 1px">
+                            <tr>
+                                <td style="width: 100px; height: 19px">
+                                    <div style="text-align: center" align="center">
+                                        <table style="width: 100px; position: static; height: 100px">
+                                            <tr>
+                                                <td style="width: 100px" align="center" valign="top">
+                                                    <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/ads/ads123.xml"
+                                                        Height="100px" Style="position: static" Width="400px" />
+                                                </td>
+                                                <td style="width: 100px">
+                                                    <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="~/ads/8.jpg" Style="position: static"
+                                                        Width="200px" /></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+                                    <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Font-Size="14pt" Orientation="Horizontal"
+                                        Style="position: static" Width="594px">
+                                        <StaticMenuItemStyle BackColor="#FFC080" ForeColor="#0000C0" />
+                                        <Items>
+                                            <asp:MenuItem NavigateUrl="~/Admin/francheese.aspx" Text="Franchisee" Value="Francheese">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Admin/Branches.aspx" Text="Branches" Value="Branches"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Admin/Courses.aspx" Text="Courses" Value="Courses"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Admin/Managers.aspx" Text="Managers" Value="Managers"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Admin/Students.aspx" Text="Students" Value="Students"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+                                        </Items>
+                                        <StaticHoverStyle BackColor="#C0C000" />
+                                        <DynamicHoverStyle BackColor="White" />
+                                        <DynamicMenuStyle BackColor="White" />
+                                        <DynamicSelectedStyle BackColor="#C0FFC0" />
+                                        <DynamicMenuItemStyle BackColor="White" />
+                                    </asp:Menu>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 19px" align="center" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

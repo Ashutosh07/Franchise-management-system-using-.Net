@@ -1,0 +1,89 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="studentmaster.master.cs" Inherits="studentmaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 97%; position: static;
+            height: 12%">
+            <tr>
+                <td align="center" valign="top">
+                    <div style="text-align: center">
+                        <table style="width: 100px; position: static; height: 1px">
+                            <tr>
+                                <td style="width: 100px; height: 19px" align="center" valign="top">
+                                    <div style="text-align: center" align="center">
+                                        <table style="width: 100px; position: static; height: 54px">
+                                            <tr>
+                                                <td style="width: 100px" align="center" valign="top">
+                                                    <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/ads/ads.xml" Height="100px"
+                                                        Style="position: static" Width="400px" />
+                                                </td>
+                                                <td style="width: 100px">
+                                                    <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="~/ads/10.jpg" Style="position: static"
+                                                        Width="250px" /></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+                                    <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Font-Size="14pt" Orientation="Horizontal"
+                                        Style="position: static" Width="592px">
+                                        <StaticMenuItemStyle BackColor="#FFC080" ForeColor="#0000C0" />
+                                        <DynamicHoverStyle BackColor="White" />
+                                        <DynamicMenuStyle BackColor="White" />
+                                        <DynamicSelectedStyle BackColor="#C0FFC0" />
+                                        <DynamicMenuItemStyle BackColor="White" />
+                                        <Items>
+                                            <asp:MenuItem Text="Profile" Value="New Item" NavigateUrl="~/student/Profile.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="JoinCourses" Value="Reports" NavigateUrl="~/student/JoinInNewCourses.aspx"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/student/CourseDetails.aspx" Text="CourseDetails" Value="CourseDetails">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/student/FeeDetails.aspx" Text="FeeDetails" Value="FeeDetails">
+                                            </asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="LogOut" Value="LogOut"></asp:MenuItem>
+                                        </Items>
+                                        <StaticHoverStyle BackColor="#C0C000" />
+                                    </asp:Menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="top">
+                                    <table style="width: 698px; color: #ff9966; position: static">
+                                        <tr>
+                                            <td style="width: 100px">
+                                                Welcome to:</td>
+                                            <td align="left" colspan="2">
+                                                <asp:Label ID="Label1" runat="server" Font-Bold="True" Style="position: static" Text="Label"
+                                                    Width="284px"></asp:Label></td>
+                                            <td colspan="3">
+                                                Branch &nbsp;of :</td>
+                                            <td style="width: 100px">
+                                                <asp:Label ID="Label2" runat="server" Font-Bold="True" Style="position: static" Text="Label"
+                                                    Width="100px"></asp:Label></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="height: 19px" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
